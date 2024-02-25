@@ -6,6 +6,7 @@ import { Loader } from "@/components/shared";
 import { Button } from "@/components/ui/button";
 import { useSignOutAccount } from "@/lib/react-query/queries";
 import { useUserContext, INITIAL_USER } from "@/context/AuthContext";
+import { SlSocialSkype } from "react-icons/sl";
 
 const LeftSidebar = () => {
   const navigate = useNavigate();
@@ -28,12 +29,10 @@ const LeftSidebar = () => {
     <nav className="leftsidebar">
       <div className="flex flex-col gap-11">
         <Link to="/" className="flex gap-3 items-center">
-          <img
-            src="/assets/images/logo.svg"
-            alt="logo"
-            width={170}
-            height={36}
-          />
+          <div className="flex-center gap-3">
+            <SlSocialSkype className="text-primary-500" size={30} />
+            <h1 className="text-2xl font-mono font-extrabold">Sosyapol</h1>
+          </div>
         </Link>
 
         {isLoading || !user.email ? (
@@ -45,7 +44,7 @@ const LeftSidebar = () => {
             <img
               src={user.imageUrl || "/assets/icons/profile-placeholder.svg"}
               alt="profile"
-              className="h-14 w-14 rounded-full"
+              className="h-14 object-cover w-14 rounded-full"
             />
             <div className="flex flex-col">
               <p className="body-bold">{user.name}</p>
@@ -61,18 +60,16 @@ const LeftSidebar = () => {
             return (
               <li
                 key={link.label}
-                className={`leftsidebar-link group ${
-                  isActive && "bg-primary-500"
-                }`}>
+                className={`leftsidebar-link group ${isActive && "bg-primary-500"
+                  }`}>
                 <NavLink
                   to={link.route}
                   className="flex gap-4 items-center p-4">
                   <img
                     src={link.imgURL}
                     alt={link.label}
-                    className={`group-hover:invert-white ${
-                      isActive && "invert-white"
-                    }`}
+                    className={`group-hover:invert-white ${isActive && "invert-white"
+                      }`}
                   />
                   {link.label}
                 </NavLink>

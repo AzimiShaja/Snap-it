@@ -2,7 +2,7 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { SlSocialSkype } from "react-icons/sl";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -39,7 +39,7 @@ const SignupForm = () => {
 
       if (!newUser) {
         toast({ title: "Sign up failed. Please try again.", });
-        
+
         return;
       }
 
@@ -50,9 +50,9 @@ const SignupForm = () => {
 
       if (!session) {
         toast({ title: "Something went wrong. Please login your new account", });
-        
+
         navigate("/sign-in");
-        
+
         return;
       }
 
@@ -64,7 +64,7 @@ const SignupForm = () => {
         navigate("/");
       } else {
         toast({ title: "Login failed. Please try again.", });
-        
+
         return;
       }
     } catch (error) {
@@ -75,13 +75,15 @@ const SignupForm = () => {
   return (
     <Form {...form}>
       <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/logo.svg" alt="logo" />
-
-        <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
+        <div className="flex-center gap-3">
+          <SlSocialSkype className="text-primary-500" size={40} />
+          <h1 className="text-4xl font-mono font-extrabold">Sosyapol</h1>
+        </div>
+        <h2 className="h3-bold md:h2-bold pt-5 sm:pt-5">
           Create a new account
         </h2>
         <p className="text-light-3 small-medium md:base-regular mt-2">
-          To use snapgram, Please enter your details
+          To use Sosyapol, Please enter your details
         </p>
 
         <form
