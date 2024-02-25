@@ -122,6 +122,11 @@ const SigninForm = () => {
               Sign up
             </Link>
           </p>
+          <div className="flex flex-col items-center gap-1">
+            <h1>Demo:</h1>
+            <p>email: john@gmail.com</p>
+            <p>password: john1234</p>
+          </div>
         </form>
       </div>
     </Form>
