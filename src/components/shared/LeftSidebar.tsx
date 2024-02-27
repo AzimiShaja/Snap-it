@@ -31,7 +31,7 @@ const LeftSidebar = () => {
         <Link to="/" className="flex gap-3 items-center">
           <div className="flex-center gap-3">
             <SlSocialSkype className="text-primary-500" size={30} />
-            <h1 className="text-2xl font-mono font-extrabold">Sosyapol</h1>
+            <h1 className="text-2xl font-mono font-extrabold">SnapIt</h1>
           </div>
         </Link>
 

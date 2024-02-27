@@ -64,7 +64,7 @@ const SigninForm = () => {
       <div className="sm:w-420 flex-center flex-col">
         <div className="flex-center gap-3">
           <SlSocialSkype className="text-primary-500" size={40} />
-          <h1 className="text-4xl font-mono font-extrabold">Sosyapol</h1>
+          <h1 className="text-4xl font-mono font-extrabold">SnapIt</h1>
         </div>
 
         <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
